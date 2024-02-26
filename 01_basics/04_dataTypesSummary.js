@@ -39,3 +39,22 @@ const myfunction = function(){
 
 // stack (primitive)  , Heap (non-primitive)
 // added the url for the reference
+
+let myYoutubename = "Vivek bhagat"
+let anothername = myYoutubename
+anothername = "Name changed"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let userOne = {
+    userEmail : "abc.gmail.com",
+    upi : "user@123"
+}
+
+let userTwo = userOne
+
+userTwo.userEmail = "none@gmail.com"
+
+console.log(userOne.userEmail);
+console.log(userTwo.userEmail);
