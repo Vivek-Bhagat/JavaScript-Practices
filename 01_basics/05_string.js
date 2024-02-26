@@ -23,3 +23,5 @@ console.log(newStringOne.trim()); //removes the whitespace
 
 const url = "https://vivek_bhagat.com/vivek%20bhagat"
 console.log(url.replace('%20', '_'));
+
+console.log(url.includes('vivek'));
