@@ -29,3 +29,10 @@ const real_another_array = another_array.flat(Infinity)   //Returns a new array 
 // console.log(Array.from("Vivek"))  // creates an array from the iteratable objects
 // console.log(Array.from({name:"Vivek"})) // interesting  // empty array
 
+
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1,score2,score3)); //  'of' return the new array from the set of the elements
