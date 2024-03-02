@@ -53,11 +53,25 @@ const user = [
 ];
 
 user[0].email;
-console.log(tinderUser);
-console.log(Object.keys(tinderUser)); // output datatype is Array
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser)); // output datatype is Array
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
 // To check the value is available in the object or not ..... sometimes it might crash the source
 // eg ..  'hasOwnProperty'
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+// -------- Destructuring the Objects -----------------
+
+const course = {
+  name: "js",
+  courseInstructor: " abc",
+  price: "999",
+};
+// course.courseInstructor   // normal way just like we have to use it repeatedly and it makes syntax worse
+
+// destructuring it
+const { courseInstructor: instrctor } = course // can assign the new name if you want to make it change
+// console.log(courseInstructor); 
+console.log(instrctor);  // same value as courseInstructor
