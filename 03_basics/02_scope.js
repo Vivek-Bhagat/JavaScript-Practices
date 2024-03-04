@@ -45,7 +45,7 @@ function addOne(num) {
   return num + 1;
 }
 
-// addTwo(5)   // Hoiesting effect since function is stored in the variable
+// addTwo(5)   // Hoisting effect since function is stored in the variable
 const addTwo = function (num) {
   return num + 2;
 };
@@ -56,3 +56,7 @@ const addThree = function (num) {
 };
 
 console.log(addThree(3));
+
+// ------- Hoisting ---------------
+
+// Hoisting is a JavaScript mechanism that moves all variable and function declarations to the top of their scope before code execution. This means that variables and functions can be used before they are declared.
