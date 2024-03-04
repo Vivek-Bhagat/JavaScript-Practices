@@ -40,7 +40,7 @@ if (true) {
 
 // ++++++++++++++++++++ Interesting ++++++++++++++++++++++++++++++
 
-console.log(addOne(5));
+// console.log(addOne(5));
 function addOne(num) {
   return num + 1;
 }
@@ -49,4 +49,10 @@ function addOne(num) {
 const addTwo = function (num) {
   return num + 2;
 };
-addTwo(5);
+// addTwo(5);
+
+const addThree = function (num) {
+  return num + 3;
+};
+
+console.log(addThree(3));
