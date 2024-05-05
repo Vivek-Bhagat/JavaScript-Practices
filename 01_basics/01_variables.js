@@ -6,7 +6,7 @@ let accountState;
 
 // accountId = 2;  // not allowed
 
-accountEmail = "abc.gmial.com";
+accountEmail = "abc.gmaill.com";
 accountPassword = "1213";
 accountCity = "bangluru";
 
