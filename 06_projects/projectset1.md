@@ -166,7 +166,7 @@ function endGame() {
 }
 
 function newGame() {
-  //
+  // making default everything
   const newGameButton = document.querySelector("#newGame");
   newGameButton.addEventListener("click", function (e) {
     randomNumber = parseInt(Math.random() * 10 + 1);
