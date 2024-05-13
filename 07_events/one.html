@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is the body</h1>
+  </body>
+  <script>
+    // this can be good but it cannot be best way to do it
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl clicked')
+    // }
+
+    //attachEvent   --> early time this is used
+    //jQuery - on
+
+    //must learn about the event
+    //type , timestamp , defaultPrevented
+    //target , toElement , srcElement , currentTarget
+    // clientX, clientY , screenX, screenY
+    //altkey, ctrlkey, shiftkey , keycode
+
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("Clicked inside the ul");
+    //   },
+    //   false
+    // );
+
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    //   },
+    //   false
+    // );
+
+    //bubbling up  --> where it goes down to up layer
+
+    // removing the image on click
+    //spillOver
+    //bubbling
+    document.querySelector("#image").addEventListener("click", function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        console.log(e.target.tagName);
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    });
+  </script>
+</html>
