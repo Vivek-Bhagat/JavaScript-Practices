@@ -182,6 +182,33 @@ function newGame() {
 }
 ```
 
+## Project 5 solution
+
+```javascript
+console.log('Project 5');
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class='color'>
+  <table>
+  <tr>
+    <th>key</th>
+    <th>keyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key === '' ? 'Spacebar' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+  </div>
+  `;
+});
+```
+
 ## Project 6 solution
 
 ```javascript
