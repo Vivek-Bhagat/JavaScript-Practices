@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circle Intersection</title>
+  <style>
+    canvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 20px auto;
+      cursor: crosshair;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="canvas" width="800" height="600"></canvas>
+
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+
+  let circles = []; // store the circles
+
+  canvas.addEventListener('click', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const radius = Math.floor(Math.random() * 50) + 20; // random radius between 20 and 70
+
+    const newCircle = { x, y, radius };
+
+    drawCircle(newCircle);
+    circles.push(newCircle);
+
+    if (circles.length === 2) {
+      // Check intersection
+      const [c1, c2] = circles;
+      const dx = c1.x - c2.x;
+      const dy = c1.y - c2.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance <= c1.radius + c2.radius) {
+        console.log('✅ Circles Intersect');
+      } else {
+        console.log('❌ Circles Do NOT Intersect');
+      }
+
+      // Reset for next two clicks
+      setTimeout(() => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        circles = [];
+      }, 2000); // clear canvas after 2 seconds
+    }
+  });
+
+  function drawCircle({ x, y, radius }) {
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fillStyle = getRandomColor();
+    ctx.fill();
+    ctx.stroke();
+  }
+
+  function getRandomColor() {
+    return `hsl(${Math.random() * 360}, 70%, 60%)`;
+  }
+</script>
+
+</body>
+</html>
