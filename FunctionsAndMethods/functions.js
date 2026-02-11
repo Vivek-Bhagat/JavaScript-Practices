@@ -7,7 +7,7 @@
 
 // sum(3, 4);
 
-//  Arrow functions are moderna way of writing functions and introduced in the javascript version 2015
+//  Arrow functions are modern way of writing functions and introduced in the javascript version 2015
 // const sum = (x, y) => {
 //     return x + y;
 // };

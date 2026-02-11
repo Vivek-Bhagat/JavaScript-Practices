@@ -100,3 +100,4 @@ function asyncFunction2() {
 //   })
 //   .then((res) => [console.log(res)]);
 
+

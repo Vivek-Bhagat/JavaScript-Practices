@@ -1,6 +1,6 @@
 
 
-const arr = [10, 2, 30, 4];
+// const arr = [10, 2, 30, 4];
 
 // let ans = arr.map((e) => {
 //     return e > 2;
@@ -60,3 +60,13 @@ const arr = [10, 2, 30, 4];
 // });
 // console.log(upperCase);
 
+// Shallow copy , the orginal values also gets changed
+let original = {
+    name: "Paris",
+    address:{city:"London"}
+};
+
+let shallowCopy = { ...original };
+shallowCopy.address.city = "New York";
+
+console.log(shallowCopy.address.city);

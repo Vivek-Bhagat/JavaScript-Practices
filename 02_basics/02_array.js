@@ -19,7 +19,7 @@ const dc_heroes = ["superman","flash","batman"]
 
 const another_array = [1,2,3,4,[5,6,7],8,[9,[10,11]]]
 const real_another_array = another_array.flat(Infinity)   //Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-// console.log(real_another_array);
+console.log(real_another_array);
 
 
 

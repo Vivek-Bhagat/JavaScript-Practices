@@ -6,7 +6,7 @@ const myArr = [1,2,3,4,5]
 
 // console.log(myArr[0]);
 
-const myHeroes = ["Loki" , "Thor" , "Batman" , "ironman"]
+// const myHeroes = ["Loki" , "Thor" , "Batman" , "ironman"]
 
 const newArr = new Array(1,2,3,4,5)
 
@@ -17,6 +17,8 @@ const newArr = new Array(1,2,3,4,5)
 // myArr.push(6)
 // myArr.push(7)
 // myArr.pop()
+// console.log(myArr);
+
 
 
 // myArr.unshift(9)  //pushing element at the start of the array
